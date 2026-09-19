@@ -1150,9 +1150,9 @@ public final class InputLogic {
         final SettingsValues settingsValues = inputTransaction.getSettingsValues();
         final boolean wasComposingWord = mWordComposer.isComposingWord();
         final boolean shouldAvoidSendingCode = Constants.CODE_SPACE == codePoint
-        && !settingsValues.mSpacingAndPunctuations.mCurrentLanguageHasSpaces
-        && wasComposingWord
-        && !"th".equals(settingsValues.mLocale.getLanguage());
+                && !settingsValues.mSpacingAndPunctuations.mCurrentLanguageHasSpaces
+                && wasComposingWord
+                && !"th".equals(settingsValues.mLocale.getLanguage());
 
         if (mWordComposer.isCursorFrontOrMiddleOfComposingWord()) {
             // If we are in the middle of a recorrection, we need to commit the recorrection
